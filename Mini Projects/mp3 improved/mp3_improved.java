@@ -63,7 +63,6 @@ public class mp3_improved {
 
     Stream.of(labels).forEach(p -> p.setFont(new Font("Arial light", Font.PLAIN, 15)));
 
-
     label.setBounds(370, 100, 300, 30);
     label11.setBounds(370, 120, 300, 50);
     
