@@ -30,11 +30,11 @@ public class mp3_improved {
            label7 = new JLabel("Tax: "),
            label8 = new JLabel("Total Deduction: ");
      JTextField  l1 = new JTextField(),
-                 l2 = new JTextField(),
+                 l2 = new JTextField("P"),
                  l3 = new JTextField(),
                  l4 = new JTextField(),
-                 l5 = new JTextField(),
-                 l6 = new JTextField(),
+                 l5 = new JTextField("P"),
+                 l6 = new JTextField("P"),
                  l7 = new JTextField(),
                  l8 = new JTextField();
     
@@ -95,9 +95,9 @@ public class mp3_improved {
         public void actionPerformed(ActionEvent ex){
     
         int hours = Integer.parseInt(l1.getText());
-        int Rate_phours = Integer.parseInt(l2.getText());
-        int SSS = Integer.parseInt(l5.getText());
-        int pagibig = Integer.parseInt(l6.getText());
+        int Rate_phours = Integer.parseInt(l2.getText().substring(1));
+        int SSS = Integer.parseInt(l5.getText().substring(1));
+        int pagibig = Integer.parseInt(l6.getText().substring(1));
             
             
         int gross_pay =  hours * Rate_phours;
@@ -118,7 +118,7 @@ public class mp3_improved {
         public void actionPerformed(ActionEvent ex){
         
         Stream.of(l1, l2, l3, l4, l5, l6, l7, l8).forEach(p -> p.setText(""));
-        
+        Stream.of(l2, l5, l6).forEach(p -> p.setText("P"));
         }
         
     });
