@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
-public class mp4 {
+public class mp4    {
   
     public static void main(String[] args){
         
@@ -97,98 +97,82 @@ public class mp4 {
     button1.setBounds(430, 520, 100, 30);
     button2.setBounds(610, 520, 100, 30);
     
-    button.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent ex){
-    
-            int quiz1 = Integer.parseInt(l1.getText());
-            int quiz2 = Integer.parseInt(l2.getText());
-            int quiz3 = Integer.parseInt(l3.getText());
-            //int net_pay = Integer.parseInt(label4.getText());
-            int attendance = Integer.parseInt(l5.getText());
-            int recitation = Integer.parseInt(l6.getText());
-            int prelimExam = Integer.parseInt(l7.getText());
-            //int Total = Integer.parseInt(label8.getText());
-                    
-            
-            int averageQuiz = (quiz1 + quiz2 + quiz3) /3;
-            l4.setText(String.valueOf(averageQuiz));
-            
-            Double classStanding = (averageQuiz * .6) + (attendance * .2) + (recitation * .2);
-            l9.setText(String.valueOf(classStanding));
-            
-            int prelimGrade = (int)((classStanding * .4) + (prelimExam  * .6));
-            l12.setText(String.valueOf(prelimGrade));
-            
-            if (prelimGrade <= 74){
-                l8.setText("Failed");
-                l10.setText("5.0");
+    button.addActionListener(ex -> {
+
+        int quiz1 = Integer.parseInt(l1.getText());
+        int quiz2 = Integer.parseInt(l2.getText());
+        int quiz3 = Integer.parseInt(l3.getText());
+        //int net_pay = Integer.parseInt(label4.getText());
+        int attendance = Integer.parseInt(l5.getText());
+        int recitation = Integer.parseInt(l6.getText());
+        int prelimExam = Integer.parseInt(l7.getText());
+        //int Total = Integer.parseInt(label8.getText());
                 
-            }
-            else if (prelimGrade >= 75 && prelimGrade <= 77){
-                l8.setText("Need Improvement");
-                l10.setText("3.0");
+        
+        int averageQuiz = (quiz1 + quiz2 + quiz3) /3;
+        l4.setText(String.valueOf(averageQuiz));
+        
+        Double classStanding = (averageQuiz * .6) + (attendance * .2) + (recitation * .2);
+        l9.setText(String.valueOf(classStanding));
+        
+        int prelimGrade = (int)((classStanding * .4) + (prelimExam  * .6));
+        l12.setText(String.valueOf(prelimGrade));
+        
+        if (prelimGrade <= 74){
+            l8.setText("Failed");
+            l10.setText("5.0");
             
-            }
-            else if (prelimGrade >= 78 && prelimGrade <= 80){
-                l8.setText("Low Passed");
-                l10.setText("2.75");
-            
-            }
-            else if (prelimGrade >= 81 && prelimGrade <= 83){
-                l8.setText("High Passed");
-                l10.setText("2.5");
-            
-            }
-            else if (prelimGrade >= 84 && prelimGrade <= 86){
-                l8.setText("Satisfactory");
-                l10.setText("2.25");
-            
-            }
-            else if (prelimGrade >= 87 && prelimGrade <= 89){
-                l8.setText("Very Satisfactory");
-                l10.setText("2.0");
-            
-            }
-            else if (prelimGrade >= 90 && prelimGrade <= 92){
-                l8.setText("Good");
-                l10.setText("1.75");
-            
-            }
-            else if (prelimGrade >= 93 && prelimGrade <= 95){
-                l8.setText("Very Good");
-                l10.setText("1.50");
-            
-            }
-            else if (prelimGrade >= 96 && prelimGrade <= 98){
-                l8.setText("Excellent");
-                l10.setText("1.25");
-            
-            }
-            else if (prelimGrade >= 99 && prelimGrade <= 100){
-                l8.setText("Superior");
-                l10.setText("1.0");
-            
-            }
-    
         }
+        else if (prelimGrade <= 77){
+            l8.setText("Need Improvement");
+            l10.setText("3.0");
+        
+        }
+        else if (prelimGrade <= 80){
+            l8.setText("Low Passed");
+            l10.setText("2.75");
+        
+        }
+        else if (prelimGrade <= 83){
+            l8.setText("High Passed");
+            l10.setText("2.5");
+        
+        }
+        else if (prelimGrade <= 86){
+            l8.setText("Satisfactory");
+            l10.setText("2.25");
+        
+        }
+        else if (prelimGrade <= 89){
+            l8.setText("Very Satisfactory");
+            l10.setText("2.0");
+        
+        }
+        else if (prelimGrade <= 92){
+            l8.setText("Good");
+            l10.setText("1.75");
+        
+        }
+        else if (prelimGrade <= 95){
+            l8.setText("Very Good");
+            l10.setText("1.50");
+        
+        }
+        else if (prelimGrade <= 98){
+            l8.setText("Excellent");
+            l10.setText("1.25");
+        
+        }
+        else if (prelimGrade <= 100){
+            l8.setText("Superior");
+            l10.setText("1.0");
+        
+        }
+
     });
     
-    button1.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent ex){
-        
-        Arrays.stream(textfields).forEach(p -> p.setText(""));
-        
-        }
-        
-        });
-        button2.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent ex){
-        
-        System.exit(0);
-        
-        }
-        
-        });
+    button1.addActionListener(ex -> Arrays.stream(textfields).forEach(p -> p.setText("")));
+    button2.addActionListener(ex -> System.exit(0));
 
     }// main
 }// class
