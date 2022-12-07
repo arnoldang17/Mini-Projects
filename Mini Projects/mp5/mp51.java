@@ -19,7 +19,7 @@ public class mp51 {
         frame = new JFrame("Sample Frame");
         button = new JButton("Exit");
         
-        frame.setSize(1000,700);
+        frame.setSize(1000,1000);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         
