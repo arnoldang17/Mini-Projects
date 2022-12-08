@@ -14,7 +14,7 @@ public class mp51 {
     JButton button;
     Image image1, newimg;
     
-    public mp51(JMenuBar mm){
+    public mp51(){
 
         frame = new JFrame("Sample Frame");
         button = new JButton("Exit");
@@ -65,13 +65,18 @@ public class mp51 {
     }
     void experience(){
 
-        label1 = new JLabel("Civil Status: Single ");
+        String a = """
+            Supervisor, Financial Systems, Omaha Public Power District, Omaha NE (20xx to present)
+            Oversee the maintenance and enhancement of financial systems to ensure process integrity and
+            system stability for user areas.            
+                """;
+        label1 = new JLabel(a);
         label2 = new JLabel ("Year-Level: 2nd year");
         label3 = new JLabel("Program: Computer Science");
         label4 = new JLabel("Age: 20");
         label5 = new JLabel("Motto:");
 
-        label1.setBounds(150, 180, 300, 30);
+        label1.setBounds(150, 180, 4000, 30);
         label2.setBounds(150, 230, 300, 30);
         label3.setBounds(150, 280, 300, 30);
         label4.setBounds(150, 330, 300, 30);

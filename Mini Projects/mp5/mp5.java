@@ -29,7 +29,7 @@ public class mp5 {
     mp5(){
         
         frame.setSize(1000, 1000);
-        frame.setVisible(true);
+        //frame.setVisible(true);
         frame.setLayout(null);  
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,19 +45,19 @@ public class mp5 {
     
         myProfile.addActionListener(ex -> {
         
-        new mp51(mm).myProfile();
+        new mp51().myProfile();
 
         frame.dispose();
         }); 
         experience.addActionListener(ex -> {
         
-        new mp51(mm).experience();
+        new mp51().experience();
         frame.dispose();
         });
 
         education.addActionListener(ex -> {
 
-        new mp51(mm).education();
+        new mp51().education();
         frame.dispose();
         });
 
@@ -65,7 +65,11 @@ public class mp5 {
     
     public static void main(String[] args){
 
-       new mp5();
+      // new mp5();
+        // make object for mp51
+    
+         new mp51().myProfile();
+    
         
     }
 }
