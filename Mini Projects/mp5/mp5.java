@@ -29,7 +29,7 @@ public class mp5 {
     mp5(){
         
         frame.setSize(1000, 1000);
-        //frame.setVisible(true);
+        frame.setVisible(true);
         frame.setLayout(null);  
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,6 +37,8 @@ public class mp5 {
         Arrays.stream(menus).forEach(p -> mm.add(p));
         Arrays.stream(menus).forEach(p -> p.setFont(new Font("Arial", Font.PLAIN, 12)));
         Arrays.stream(fileItems).forEach(p -> p.setFont(new Font("Arial", Font.PLAIN, 12)));
+        Arrays.stream(historyItems).forEach(p -> p.setFont(new Font("Arial", Font.PLAIN, 12)));
+        Arrays.stream(bookPublishedItems).forEach(p -> p.setFont(new Font("Arial", Font.PLAIN, 12)));
         Arrays.stream(fileItems).forEach(p -> file.add(p));
         Arrays.stream(historyItems).forEach(p -> history.add(p));
         Arrays.stream(bookPublishedItems).forEach(p -> bookPublished.add(p));
@@ -45,31 +47,58 @@ public class mp5 {
     
         myProfile.addActionListener(ex -> {
         
-        new mp51().myProfile();
-
-        frame.dispose();
-        }); 
+            new mp51(mm).myProfile();
+            frame.dispose();
+            }); 
         experience.addActionListener(ex -> {
         
-        new mp51().experience();
-        frame.dispose();
-        });
+            new mp51(mm).experience();
+            frame.dispose();
+            });
 
         education.addActionListener(ex -> {
 
-        new mp51().education();
-        frame.dispose();
-        });
+            new mp51(mm).education();
+            frame.dispose();
+            });
+        parents.addActionListener(ex -> {
+        
+            new mp51(mm).parents();
+            frame.dispose();
+            }); 
+        siblings.addActionListener(ex -> {
+        
+            new mp51(mm).siblings();
+            frame.dispose();
+            });
+
+        friends.addActionListener(ex -> {
+
+            new mp51(mm).friends();
+            frame.dispose();
+            });
+        local.addActionListener(ex -> {
+    
+            new mp51(mm).local();
+            frame.dispose();
+            }); 
+        international.addActionListener(ex -> {
+            
+            new mp51(mm).international();
+            frame.dispose();
+            });
+    
+        article.addActionListener(ex -> {
+    
+            new mp51(mm).article();
+            frame.dispose();
+            });
 
     }
     
     public static void main(String[] args){
 
-      // new mp5();
-        // make object for mp51
-    
-         new mp51().myProfile();
-    
+       new mp5();
         
     }
 }
