@@ -60,39 +60,39 @@ public class mp5 implements ActionListener{
 public void actionPerformed(ActionEvent e) {
         
     if(e.getSource() == myProfile){
-        new mp51(mm).myProfile();
+        new mp52().myProfile();
         frame.dispose();
     }
     else if(e.getSource() == experience){
-        new mp51(mm).experience();
+        new mp51().experience();
         frame.dispose();
     }
     else if(e.getSource() == education){
-        new mp51(mm).education();
+        new mp51().education();
         frame.dispose();
     }
     else if(e.getSource() == parents){
-        new mp51(mm).parents();
+        new mp51().parents();
         frame.dispose();
     }
     else if(e.getSource() == siblings){
-        new mp51(mm).siblings();
+        new mp51().siblings();
         frame.dispose();
     }
     else if(e.getSource() == friends){
-        new mp51(mm).friends();
+        new mp51().friends();
         frame.dispose();
     }
     else if(e.getSource() == local){
-        new mp51(mm).local();
+        new mp51().local();
         frame.dispose();
     }
     else if(e.getSource() == international){
-        new mp51(mm).international();
+        new mp51().international();
         frame.dispose();
     }
     else if(e.getSource() == article){
-        new mp51(mm).article();
+        new mp51().article();
         frame.dispose();
     }
     

@@ -1,70 +1,13 @@
 
 import java.awt.Font;
-import java.awt.Image;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
 import javax.swing.*;
 
-public class mp51 {
-    JFrame frame;
-    JLabel label1, label2, label3, label4, label5,label6, label7, label8, labelimage;
-    JLabel[] labels;
-    ImageIcon image;
-    JButton button;
-    Image image1, newimg;
+public class mp51 extends mp53 {
     
-    public mp51(JMenuBar mm){
-
-        frame = new JFrame();
-        button = new JButton("Exit");
-        
-        frame.setSize(1000,1000);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        frame.setLayout(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(button);
-        
-        button.setBounds(400, 600, 100, 30);
-        button.addActionListener(ex ->{
-         
-        new mp5();
-        frame.dispose();
-        });
-        // frame.setJMenuBar(mm);
-        
-    }
-    void myProfile(){
-
-        image = new ImageIcon("D:\\Data\\Java\\Mini Projects\\Mini Projects\\mp5\\marie-magny-fxel4isxgaa6suc-1.jpg");
-        
-        Image image1 = image.getImage(); 
-        Image newimg = image1.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); 
-        image = new ImageIcon(newimg);
-
-        label1 = new JLabel("Civil Status: Single ");
-        label2 = new JLabel ("Year-Level: 2nd year");
-        label3 = new JLabel("Program: Computer Science");
-        label4 = new JLabel("Age: 20");
-        label5 = new JLabel("Motto:");
-        labelimage = new JLabel();
-    
-        label1.setBounds(200, 230, 500, 30);
-        label2.setBounds(200, 280, 500, 30);
-        label3.setBounds(200, 330, 500, 30);
-        label4.setBounds(200, 380, 500, 30);
-        label5.setBounds(200, 430, 500, 30);
-        
-        labelimage.setIcon(image);
-        //labelimage.setVerticalAlignment(JLabel.TOP);
-        labelimage.setBounds(200, 100, 120, 120);
-        
-        Stream.of(label1, label2, label3, label4, label5, labelimage).forEach(p -> frame.add(p));
-        labels = new JLabel[]{label1, label2, label3, label4, label5};
-        Arrays.stream(labels).forEach(p -> p.setFont(new Font("Arial", Font.PLAIN, 25)));
-    }
-    void experience(){
+    protected void experience(){
 
         label1 = new JLabel("Accounting and Financial Management:");
         label2 = new JLabel ("\t Developed and maintained accounting records for up to fifty bank accounts.");
