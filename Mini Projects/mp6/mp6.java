@@ -135,11 +135,11 @@ public class mp6 {
 
     private int system() {
         ArrayList<String> input = new ArrayList<String>(Arrays.asList(display.getText().split(" "))); //6
-        ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(Integer.parseInt(display.getText().split("+*-/"))));
-        
-        
+        ArrayList<String> numbers = new ArrayList<String>(Arrays.asList(display.getText().split("+*-/")));
+        List<Integer> answer = new ArrayList<Integer>();
 
         System.out.println(Arrays.toString(numbers.toArray()));
+
 
         for (int i = input.size(); 0 < i; i--) {
             if (input.get(i).equals("+")) {
@@ -179,10 +179,10 @@ public class mp6 {
         return numbers.get(i+1) - numbers.get(i-1);
 
     }
-    private int add(ArrayList<Integer> numbers, int i, ArrayList<String> input) { 
+    private int add(ArrayList<String> numbers, int i, ArrayList<String> input) { 
         int a = Integer.parseInt(input.get(i-1));
         int b = Integer.parseInt(input.get(i+1));
-
+        
         int c = numbers.indexOf(a);
         int d = numbers.indexOf(b);
 
